@@ -8,8 +8,7 @@ const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-const port = 8080
-
+const port = Process.env.PORT || 3000
 mongoose.connect('mongodb://localhost/userdata', {useNewUrlParser: true,
 useUnifiedTopology: true,
 useFindAndModify: false,
